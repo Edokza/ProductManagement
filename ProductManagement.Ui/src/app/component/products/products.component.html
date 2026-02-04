@@ -1,0 +1,38 @@
+<h2>Product Manager</h2>
+
+<!-- Input -->
+<input
+  type="text"
+  [(ngModel)]="productCode"
+  placeholder="ABCDE-12345-XXXXX-XXXXX-XXXXX-XXXXX"
+  style="width:400px"
+/>
+
+<button class="btn-add" (click)="addProduct()">Add</button>
+
+<p style="color:red">{{ error }}</p>
+
+<hr>
+
+<!-- Table -->
+<table border="1" width="100%">
+  <tr>
+    <th>ID</th>
+    <th>Code</th>
+    <th>View</th>
+    <th>Delete</th>
+  </tr>
+
+  @for (p of products; track p.id) {
+  <tr>
+    <td>{{ p.id }}</td>
+    <td>{{ p.productCode }}</td>
+    <td>
+      <button class="btn-qr">QR</button>
+    </td>
+    <td>
+        <button class="btn-delete"(click)="deleteProduct(p.id)">Delete</button>
+    </td>
+  </tr>
+}
+</table>
