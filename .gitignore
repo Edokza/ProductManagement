@@ -1,0 +1,75 @@
+##################################
+# ========== .NET / C# ==========
+##################################
+
+# Build results
+bin/
+obj/
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VSCode
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+##################################
+# ========== Angular / Node ======
+##################################
+
+# Node modules
+node_modules/
+
+# Angular build
+dist/
+.tmp/
+.cache/
+
+# Angular environment
+.env
+.env.*
+
+# npm / yarn / pnpm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+##################################
+# ========== OS ==========
+##################################
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+##################################
+# ========== Security ==========
+##################################
+
+# Secrets
+appsettings.Development.json
+appsettings.Production.json
+
+##################################
+# ========== Others ==========
+##################################
+
+# Coverage
+coverage/
+
+# Temp files
+*.tmp
+*.bak
+*.swp
