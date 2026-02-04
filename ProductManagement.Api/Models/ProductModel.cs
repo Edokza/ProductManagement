@@ -1,0 +1,13 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProductManagement.Api.Models
+{
+    public class ProductModel
+    {
+        public int Id { get; set; }
+        [Required]
+        [MaxLength(40)]
+        public string ProducCode { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+    }
+}
