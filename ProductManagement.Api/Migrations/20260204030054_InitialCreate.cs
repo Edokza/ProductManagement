@@ -17,7 +17,7 @@ namespace ProductManagement.Api.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ProducCode = table.Column<string>(type: "TEXT", maxLength: 40, nullable: false),
+                    ProductCode = table.Column<string>(type: "TEXT", maxLength: 40, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

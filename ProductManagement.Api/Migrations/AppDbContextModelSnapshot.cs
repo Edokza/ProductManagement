@@ -26,7 +26,7 @@ namespace ProductManagement.Api.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ProducCode")
+                    b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("TEXT");

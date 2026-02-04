@@ -11,7 +11,7 @@ using ProductManagement.Api.Data;
 namespace ProductManagement.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260204024706_InitialCreate")]
+    [Migration("20260204030054_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -29,7 +29,7 @@ namespace ProductManagement.Api.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ProducCode")
+                    b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasMaxLength(40)
                         .HasColumnType("TEXT");

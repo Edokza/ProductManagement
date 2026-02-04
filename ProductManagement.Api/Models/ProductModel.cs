@@ -7,7 +7,7 @@ namespace ProductManagement.Api.Models
         public int Id { get; set; }
         [Required]
         [MaxLength(40)]
-        public string ProducCode { get; set; } = string.Empty;
+        public string ProductCode { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
     }
 }

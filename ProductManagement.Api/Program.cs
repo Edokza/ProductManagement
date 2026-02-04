@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProductManagement.Api.Data;
+using ProductManagement.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlite("Data Source=products.db");
 });
+
+builder.Services.AddScoped<IProductService, ProductService>();
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
