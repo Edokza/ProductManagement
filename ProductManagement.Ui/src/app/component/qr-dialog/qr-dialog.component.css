@@ -1,0 +1,41 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-box h3 {
+  margin-bottom: 15px;
+}
+
+.modal-box p {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.btn-close {
+  background: #34495e;
+  color: white;
+  padding: 7px 16px;
+  border: none;
+  border-radius: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background: #2c3e50;
+}

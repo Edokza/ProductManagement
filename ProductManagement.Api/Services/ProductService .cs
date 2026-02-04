@@ -25,7 +25,9 @@ namespace ProductManagement.Api.Services
 
         public async Task<ProductModel> CreateAsync(string productCode)
         {
-            var pattern = @"^[A-Z0-9]{5}(-[A-Z0-9]{5}){5}$";
+            var cleanedCode = productCode.Replace("-", "");
+
+            var pattern = @"^[A-Z0-9]{30}$";
 
             if (!Regex.IsMatch(productCode, pattern))
             {

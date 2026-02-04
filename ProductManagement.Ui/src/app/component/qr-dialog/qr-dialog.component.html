@@ -1,0 +1,20 @@
+@if (visible) {
+  <div class="modal-backdrop">
+
+    <div class="modal-box">
+
+      <h3>Product QR Code</h3>
+
+      <qrcode
+        [qrdata]="value"
+        [width]="220">
+      </qrcode>
+
+      <button class="btn-close" (click)="onClose()">
+        Close
+      </button>
+
+    </div>
+
+  </div>
+}

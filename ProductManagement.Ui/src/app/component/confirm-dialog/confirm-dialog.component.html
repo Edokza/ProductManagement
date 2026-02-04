@@ -1,0 +1,27 @@
+<div class="overlay">
+
+  <div class="dialog">
+
+    <h5>{{ title }}</h5>
+
+    <p>{{ message }}</p>
+
+    <div class="actions">
+
+      <button
+        class="btn-add"
+        (click)="cancel.emit()">
+        Cancel
+      </button>
+
+      <button
+        class="btn-delete"
+        (click)="confirm.emit()">
+        Delete
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

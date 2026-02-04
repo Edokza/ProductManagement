@@ -3,9 +3,10 @@
 <!-- Input -->
 <input
   type="text"
-  [(ngModel)]="productCode"
+  [ngModel]="productCode"
+  (ngModelChange)="onCodeInput($event)"
   placeholder="ABCDE-12345-XXXXX-XXXXX-XXXXX-XXXXX"
-  style="width:400px"
+  maxlength="35"
 />
 
 <button class="btn-add" (click)="addProduct()">Add</button>
@@ -26,13 +27,30 @@
   @for (p of products; track p.id) {
   <tr>
     <td>{{ p.id }}</td>
-    <td>{{ p.productCode }}</td>
+    <td>{{ formatCode(p.productCode) }}</td>
     <td>
-      <button class="btn-qr">QR</button>
+      <button class="btn-qr" (click)="openQr(p.productCode)">QR</button>
     </td>
     <td>
-        <button class="btn-delete"(click)="deleteProduct(p.id)">Delete</button>
+        <button class="btn-delete"(click)="askDelete(p.id, p.productCode)">Delete</button>
     </td>
   </tr>
 }
 </table>
+
+<app-qr-dialog
+  [value]="qrValue"
+  [visible]="showQr"
+  (close)="closeQr()">
+</app-qr-dialog>
+
+<app-confirm-dialog
+  *ngIf="showConfirm"
+  title="Confirm Delete"
+  [message]="'ต้องการลบ ' + deleteCode + ' ใช่หรือไม่?'"
+
+  (confirm)="onConfirm()"
+  (cancel)="onCancel()">
+</app-confirm-dialog>
+
+
